@@ -1,0 +1,41 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,force:hasRecordId" controller="CommunityManagerAuraController">
+    
+    <aura:attribute name="manager" type="Contact"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="supportURL" type="string" default="/contactsupport"/>
+    
+    <aura:if isTrue="{! !empty(v.manager)}">
+        
+        <div style="width: 21rem;" class="backgroundMenu">
+            <div class="slds-page-header">
+                <div class="slds-media">
+                    <div class="slds-media__body">
+                        <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Your AccountManager" style="padding: 0.5rem; color: rgb(0,118,129);">{!$Label.c.Your_Accountmanager}</h1>
+                        <!--p class="slds-text-body_small slds-line-height_reset">als u vragen hebt hoor ik het graag</p-->
+                        <figure>
+                            <img src="{!v.manager.FullPhotoUrl}" alt="Description of the image" class="profileIcon" ALIGN="left" HSPACE="15"/>
+                            <div class="slds-text-heading_small">
+                                <div style="padding: 0.5rem;">
+                                    <lightning:formattedText value="{!v.manager.Name}"/>
+                                    <br/>
+                                    <lightning:formattedText value="{!v.manager.Phone}"/>
+                                    <br/>
+                                    <aura:if isTrue="{! !empty(v.manager.LinkedIn__c)}">
+                                        <lightning:formattedText value="{!'LinkedIn: ' + v.manager.LinkedIn__c}"/>
+                                        <br/>
+                                    </aura:if>
+                                </div>
+                                    <ui:button aura:id="button" buttonTitle="Contact Support" label="{!$Label.c.Contact}" press="{!c.navigate}" 
+                                               class="slds-button slds-button_destructive contactButton" />
+                                    <br/>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    </aura:if>
+</aura:component>

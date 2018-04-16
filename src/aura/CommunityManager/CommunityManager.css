@@ -1,0 +1,17 @@
+.THIS .profileIcon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.THIS .contactButton{
+border-radius: 0px !important;background: #963821; color: #ffffff !important; text-decoration: none;width:165px
+}
