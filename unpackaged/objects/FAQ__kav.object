@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <articleTypeChannelDisplay>
+        <articleTypeTemplates>
+            <channel>App</channel>
+            <template>Tab</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Prm</channel>
+            <template>Tab</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Csp</channel>
+            <template>Tab</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Pkb</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+    </articleTypeChannelDisplay>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Is used to capture all the FAQ related articles</description>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <fields>
+        <fullName>Answer__c</fullName>
+        <externalId>false</externalId>
+        <label>Answer</label>
+        <length>32768</length>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question__c</fullName>
+        <externalId>false</externalId>
+        <label>Question</label>
+        <length>32768</length>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Subject__c</fullName>
+        <externalId>false</externalId>
+        <label>Subject</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Invoices</fullName>
+                    <default>false</default>
+                    <label>Invoices</label>
+                </value>
+                <value>
+                    <fullName>Delivery Times</fullName>
+                    <default>false</default>
+                    <label>Delivery Times</label>
+                </value>
+                <value>
+                    <fullName>Technical issues</fullName>
+                    <default>false</default>
+                    <label>Technical issues</label>
+                </value>
+                <value>
+                    <fullName>Cancellation</fullName>
+                    <default>false</default>
+                    <label>Cancellation</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>FAQ</label>
+    <pluralLabel>FAQs</pluralLabel>
+</CustomObject>

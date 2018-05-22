@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>LinkedIn__c</fullName>
+        <externalId>false</externalId>
+        <label>LinkedIn</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>email_disturbance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>settings in community</description>
+        <externalId>false</externalId>
+        <label>email_disturbance</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>email_news__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>settings in community</description>
+        <externalId>false</externalId>
+        <label>email_news</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

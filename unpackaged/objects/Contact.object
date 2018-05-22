@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Account_Manager_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account.Owner.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Manager ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Language_User__c</fullName>
+        <description>Updated from PROCESS BUILDER process:&quot;Community: Copy Language to contact&quot;</description>
+        <externalId>false</externalId>
+        <label>Language User</label>
+        <length>24</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Logo_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT($Api.Partner_Server_URL_420,FIND(&apos;.com&apos;,$Api.Partner_Server_URL_420)) + &apos;com/servlet/servlet.ImageServer?id=&apos;+ 
+$Setup.System_Settings__c.Logo_Id__c+ 
+&apos;&amp;oid=&apos; 
++$Setup.System_Settings__c.Org_Id__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Logo URL</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Send_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>this field is updated from InfoCheck_Schedulable class</description>
+        <externalId>false</externalId>
+        <label>Send Email</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>
